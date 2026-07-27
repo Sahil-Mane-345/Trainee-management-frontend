@@ -1,0 +1,13 @@
+<main class="login-form-container">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+        <h1 class="login-form-title">Trainee Management System</h1>
+        <hr/>
+        <h2 class="login-form-text">Login</h2>
+
+        <app-text-input id="login-username" [maxLength]="10" inputLabel="Username" [inputControl]="loginForm.controls.userName" [inputErrors]="loginFormErrors.userName"></app-text-input>
+        <app-text-input id="login-password" inputLabel="Password" [inputControl]="loginForm.controls.password" [inputErrors]="loginFormErrors.password"></app-text-input>
+
+        <app-button type="submit" [disabled]="loginForm.invalid">Login</app-button>
+
+    </form>
+</main>
