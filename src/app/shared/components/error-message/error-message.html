@@ -1,0 +1,9 @@
+@if (shouldShowErrors) {
+    <ul [id]="id" class="error-list list-disc">
+        @for ( message of messages | keyvalue; track message.key) {
+            @if (control.hasError(message.key)) {
+                <li>{{message.value}}</li>
+            }
+        }
+    </ul>
+}
