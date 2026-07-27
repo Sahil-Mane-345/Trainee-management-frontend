@@ -1,9 +1,6 @@
-@if (shouldShowErrors) {
+<p>Working</p>
     <ul [id]="id" class="error-list list-disc">
-        @for ( message of messages | keyvalue; track message.key) {
-            @if (control.hasError(message.key)) {
-                <li>{{message.value}}</li>
-            }
+        @for ( message of messages; track $index) {
+                <li>{{message}}</li>
         }
     </ul>
-}

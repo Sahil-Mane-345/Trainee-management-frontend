@@ -1,0 +1,24 @@
+.form-input{
+    border: 2px solid black;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.form-input{
+    border-radius: 5px;
+    font-size: 19px;
+}
+
+.form-input:focus{
+    outline: 3px solid blue;
+}
+
+.form-input[type="number"]::-webkit-inner-spin-button, .form-input[type="number"]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+} 

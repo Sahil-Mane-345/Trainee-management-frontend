@@ -35,13 +35,10 @@
   outline-offset: 2px;
 }
 
-/* Respect users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .btn { transition: none; }
 }
 
-/* Loading state — add the .btn--loading class to the button */
-/* (also set the disabled attribute + aria-busy="true" for a11y) */
 .btn--loading {
   background: #5358e6;
   color: rgba(255,255,255,0.8);

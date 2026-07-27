@@ -1,0 +1,8 @@
+<div class="input-box">
+    <label [for]="id" class="form-label">{{inputLabel}}</label>
+    <input [id]="id" [type]="inputType" [formControl]="inputControl" [attr.maxlength]="maxLength ?? null" [attr.placeholder]="placeholder ?? null"  class="form-input">
+    @if (shouldShowErrors) {
+        <app-error-message [id]="errorId" [messages]="activeErrorMessages"></app-error-message>
+    }
+</div>
+

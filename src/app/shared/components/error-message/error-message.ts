@@ -1,21 +1,17 @@
-import { KeyValuePipe } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { AbstractControl } from '@angular/forms';
+
 
 @Component({
   selector: 'app-error-message',
-  imports: [KeyValuePipe],
+  imports: [],
   templateUrl: './error-message.html',
   styleUrl: './error-message.css',
 })
-export class ErrorMessage {
-  @Input() control!:AbstractControl;
+export class ErrorMessage{
 
   @Input() id!:string;
 
-  @Input() messages!: Record<string,string>;
+  @Input() messages!: string[];
 
-  get shouldShowErrors():boolean{
-    return ( this.control.invalid && (this.control.touched || this.control.dirty));
-  }
+
 }

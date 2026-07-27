@@ -1,3 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(215, 215, 255);
+}
+
+*:focus{
+    outline: 3px solid blue;
+}
