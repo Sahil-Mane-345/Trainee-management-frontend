@@ -1,0 +1,24 @@
+main{
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: stretch;
+}
+
+.page-content{
+    flex: 1;
+    min-width: 0;
+}
+
+.sidebar-backdrop{
+    position: fixed;
+    inset: 0;
+    display: block;
+    background-color: rgba(81, 94, 155, 0.684);
+    z-index: 60;
+}
+
+@media(min-width:640px){
+    .sidebar-backdrop{
+        display: none;
+    }
+}
