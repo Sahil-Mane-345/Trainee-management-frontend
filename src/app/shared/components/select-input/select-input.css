@@ -1,7 +1,14 @@
-.form-input{
-    border: 2px solid black;
+.input-box{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    margin-block: 8px;
 }
 
 .form-select{
+    font-size: 19px;
+    border: 2px solid black;
+    border-radius: 5px;
     font-size: 19px;
 }

@@ -1,0 +1,21 @@
+<a class="navigation-btn" routerLink="/trainee">Go Back to Trainee</a>
+<div>
+    <form [formGroup]="createTraineeForm" (ngSubmit)="onSubmit()" class="create-trainee-form m-auto sm:m-0">
+        <h1>Create Trainee Form</h1>
+        <hr/>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <app-text-input id="trainee-firstname" [maxLength]="50" inputLabel="First Name" [inputControl]="createTraineeForm.controls.firstName" [inputErrors]="traineeErrors.firstName"></app-text-input>
+
+            <app-text-input id="trainee-lastname" [maxLength]="50" inputLabel="Last Name" [inputControl]="createTraineeForm.controls.lastName" [inputErrors]="traineeErrors.lastName"></app-text-input>
+        </div>
+        <app-text-input id="trainee-email" inputType="email" inputLabel="Email" [inputControl]="createTraineeForm.controls.email" [inputErrors]="traineeErrors.email"></app-text-input>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-3">
+            <app-text-input id="trainee-techstack" inputLabel="Tech Stack" [inputControl]="createTraineeForm.controls.techStack" [inputErrors]="traineeErrors.techStack"></app-text-input>
+
+            <app-select-input id="trainee-status" inputLabel="Status" [inputControl]="createTraineeForm.controls.status" [inputErrors]="traineeErrors.status" [options]="traineeSelectOptions"></app-select-input>
+        </div>
+
+        <app-button type="submit" [disabled]="createTraineeForm.invalid">Create Trainee</app-button>
+    </form>
+</div>
