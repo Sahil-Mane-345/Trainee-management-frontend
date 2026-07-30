@@ -1,0 +1,1 @@
+export const urls = ['auth/login'];
