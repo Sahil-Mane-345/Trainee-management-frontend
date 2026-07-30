@@ -7,9 +7,9 @@ export interface LoginFormModel {
 
 export const loginFormErrors = {
     userName : {
-        required : "UserName is Required",
-        minlength: "UserName must containe minimum 3 characters",
-        maxlength: "UserName must contain maximum 10 characters"
+        required : "Username is Required",
+        minlength: "Username must containe minimum 3 characters",
+        maxlength: "Username must contain maximum 10 characters"
     },
     password : {
         required: "Password is Required",
