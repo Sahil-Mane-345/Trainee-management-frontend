@@ -29,4 +29,5 @@ header .logo{
     border: 2px solid rgb(100, 1, 1);
     border-radius: 5px;
     padding: 5px 10px;
+    cursor: pointer;
 }

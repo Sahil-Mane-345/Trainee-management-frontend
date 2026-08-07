@@ -1,15 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Service } from '@angular/core';
-import { Observable } from 'rxjs';
-import { userLoginRequest, userLoginResponse } from '../models/authModel';
+
 import { backendUrl } from '../../constants/backendUrls';
+import { IUserLoginRequest, IUserLoginResponse } from '../models/authModel';
 
 @Service()
 export class AuthService {
     private baseUrl:string = backendUrl;
     private httpClient = inject(HttpClient);
 
-    userLogin(payload:userLoginRequest){
-        return this.httpClient.post<userLoginResponse>(this.baseUrl+"api/user/login",payload);
+    userLogin(payload:IUserLoginRequest){
+        return this.httpClient.post<IUserLoginResponse>(this.baseUrl+"api/user/login",payload);
     }
 }

@@ -1,9 +1,3 @@
-import { required } from "@angular/forms/signals"
-
-export interface LoginFormModel {
-    userName: string,
-    password: string
-}
 
 export const loginFormErrors = {
     userName : {

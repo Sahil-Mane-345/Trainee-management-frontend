@@ -1,3 +1,7 @@
+@if (loaderState) {
+    <app-loader></app-loader>
+}
+
 <a class="navigation-btn" routerLink="/trainee">Go Back to Trainee</a>
 <div>
     <form [formGroup]="createTraineeForm" (ngSubmit)="onSubmit()" class="create-trainee-form m-auto sm:m-0">

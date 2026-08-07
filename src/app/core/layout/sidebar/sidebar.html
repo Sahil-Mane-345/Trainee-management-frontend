@@ -1,10 +1,10 @@
 <aside class="sidebar-section" [class.sidebar-section-visible]="sidebarState" [class.sidebar-section-hidden]="!sidebarState" (click)="closeSidebar.emit()">
     <ul>
         <li>
-            <a href="/" class="sidebar-links">Dashboard</a>
+            <a routerLink="/" class="sidebar-links" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Dashboard</a>
         </li>
         <li>
-            <a href="/auth/login" class="sidebar-links">Trainee</a>
+            <a routerLink="/trainee" class="sidebar-links" routerLinkActive="active">Trainee</a>
         </li>
         <li>
             <a href="/" class="sidebar-links">Mentor</a>

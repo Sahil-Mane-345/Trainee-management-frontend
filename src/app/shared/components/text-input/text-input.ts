@@ -29,8 +29,6 @@ export class TextInput {
   }
 
   get shouldShowErrors():boolean{
-    console.log(this.i++);
-    console.log(this.inputControl.errors);
     return (this.inputControl.touched || this.inputControl.dirty) && this.inputControl.invalid;
   }
 
@@ -42,7 +40,6 @@ export class TextInput {
     }
     
     let new1 = Object.keys(errors).map(key => this.inputErrors[key]).filter((message): message is string => !!message);
-    console.log(new1);
     return new1;
   }
 }

@@ -1,22 +1,23 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from "@angular/router";
-import { TextInput } from "../../../shared/components/text-input/text-input";
 import { traineeCreateErrors } from '../errors/traineeCreateErrors';
-import { SelectInput, SelectOption } from "../../../shared/components/select-input/select-input";
-import { Button } from "../../../shared/components/button/button";
+import { SelectOption } from "../../../shared/components/select-input/select-input";
 import { TraineeService } from '../../../core/services/trainee-service/trainee-service';
 import { ITraineeCreate } from '../../../core/services/models/traineeModel';
+import { SHARED_UI } from '../../../shared/components';
 
 @Component({
   selector: 'app-trainee-create',
-  imports: [RouterLink, ReactiveFormsModule, TextInput, SelectInput, Button],
+  imports: [RouterLink, ReactiveFormsModule, ...SHARED_UI],
   templateUrl: './trainee-create.html',
   styleUrl: './trainee-create.css',
 })
 export class TraineeCreate {
   private fb: FormBuilder = inject(FormBuilder);
   private traineeService: TraineeService = inject(TraineeService);
+
+  loaderState:boolean = false;
 
   traineeErrors = traineeCreateErrors;
 
@@ -45,15 +46,15 @@ export class TraineeCreate {
 
   onSubmit():void{
     if(this.createTraineeForm.valid){
+      this.loaderState = true;
       const payload : ITraineeCreate = this.createTraineeForm.getRawValue();
+      
+        this.traineeService.createTrainee(payload).subscribe((res) => {
+          alert("Trainee Created Successfully");
+          this.createTraineeForm.reset();
+        });
+      this.loaderState = false;
     
-      this.traineeService.createTrainee(payload).subscribe((res) => {
-        console.log(res);
-        alert("Trainee Created Successfully");
-      });
-
-      this.createTraineeForm.reset();
-
     }
   }
 }

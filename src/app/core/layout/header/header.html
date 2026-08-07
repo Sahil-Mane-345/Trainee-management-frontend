@@ -3,7 +3,7 @@
         Trainee Management
     </div>
     <div class="menu-bar">
-        <button type="button" id="log-out-btn">Log Out</button>
+        <button type="button" id="log-out-btn" (click)="logOut()">Log Out</button>
         <div id="menu-icon" (click)="toggleSidebar.emit()" class="block sm:hidden cursor-pointer">
             @if (!toggleState) {
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

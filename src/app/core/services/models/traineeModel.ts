@@ -1,15 +1,15 @@
-export interface Trainee{
+export interface ITrainee{
     id: string,
     firstName: string,
     lastName: string,
     email: string,
-    teachStack: string,
+    techStack: string,
     status: string,
     createdAt: Date,
-    updatedAt? : Date
+    updatedAt? : Date | null
 }
 
-export interface TraineeGetAllPayload{
+export interface ITraineeGetAllPayload{
     search: string,
     status: string,
     pageNumber: number,
@@ -24,7 +24,7 @@ export interface ITraineeCreate{
     status: string
 }
 
-export interface TraineeUpdate{
+export interface ITraineeUpdate{
     firstName: string,
     lastName: string,
     email: string,
@@ -33,7 +33,7 @@ export interface TraineeUpdate{
 }
 
 
-export interface PagedResponse<T>{
+export interface IPagedResponse<T>{
     pageNumber: number,
     pageSize: number,
     totalRecords: number,

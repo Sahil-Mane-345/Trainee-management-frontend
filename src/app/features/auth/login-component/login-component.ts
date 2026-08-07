@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { FormBuilder, NgModel, ReactiveFormsModule, Validators } from '@angular/forms';
-import { loginFormErrors, LoginFormModel } from '../loginModels';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { loginFormErrors,  } from '../loginErrors';
 import { SHARED_UI } from '../../../shared/components';
 import { AuthService } from '../../../core/services/auth-service/auth-service';
 import { HttpErrorResponse } from '@angular/common/http';

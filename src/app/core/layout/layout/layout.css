@@ -7,6 +7,7 @@ main{
 .page-content{
     flex: 1;
     min-width: 0;
+    margin: 5px;
 }
 
 .sidebar-backdrop{

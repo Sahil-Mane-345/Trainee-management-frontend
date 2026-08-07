@@ -1,0 +1,43 @@
+.loader-wrap { display: inline-flex; align-items: center; justify-content: center;  }
+.loader-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.loader {
+  display: inline-flex;
+  gap: 1.5px;
+  height: 40px;
+  align-items: center;
+}
+.loader > span {
+  width: 3px;
+  height: 100%;
+  background: #6366f1;
+  border-radius: 1.5px;
+  animation: bar-wave 950ms ease-in-out alternate infinite;
+}
+.loader > span:nth-child(1) { animation-delay: 0ms; }
+.loader > span:nth-child(2) { animation-delay: 40ms; }
+.loader > span:nth-child(3) { animation-delay: 79ms; }
+.loader > span:nth-child(4) { animation-delay: 119ms; }
+.loader > span:nth-child(5) { animation-delay: 158ms; }
+.loader > span:nth-child(6) { animation-delay: 198ms; }
+.loader > span:nth-child(7) { animation-delay: 238ms; }
+.loader > span:nth-child(8) { animation-delay: 277ms; }
+@keyframes bar-wave {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .loader, .loader *, .loader::before, .loader::after { animation-duration: 1.5s !important; animation-iteration-count: 1 !important; }
+}
+
+
+.loader-container{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    inset: 0;
+    background-color: #101031ba;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    z-index: 100;
+}
